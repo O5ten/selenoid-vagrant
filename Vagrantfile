@@ -1,10 +1,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-# All Vagrant configuration is done below. The "2" in Vagrant.configure
-# configures the configuration version (we support older styles for
-# backwards compatibility). Please don't change it unless you know what
-# you're doing.
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.box_download_insecure = true
@@ -39,7 +35,7 @@ Vagrant.configure("2") do |config|
         -v ${HOME}:/root                                \
         -e OVERRIDE_HOME=${HOME}                        \
         aerokube/cm:latest-release selenoid start       \
-        --vnc --tmpfs 128 --last-versions 5
+        --vnc --tmpfs 128 --last-versions 2
      docker run -d --name selenoid-ui  \
         --link selenoid                 \
         -p 8080:8080                    \

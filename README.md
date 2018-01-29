@@ -34,9 +34,9 @@ http://localhost:8080
 ### Capabilities
 This default setup of Selenoid comes packaged with two versions of each browser, that is, however highly configurable inside your vagrant machine. ```vagrant ssh``` gets you inside the virtualbox. Consult the Selenoid documentation on how to modify the browsers.json file and restart docker for the new capabilities to take effect.
 
-- Chrome 62 and 61
-- Firefox 55 and 56
-- Opera 47 and 48
+- Chromes latest and one earlier
+- Firefoxs latest and one earlier
+- Operas latest and one earlier
 
 ### Selenium Java Example
 Now you can start developing towards the Selenoid grid. This repository contains a single example for triggering a JUnit test using the basic Java bindings towards the selenoid-grid. Implement using your favourite language, IDE and build system.
@@ -53,7 +53,6 @@ public class SeleniumTest {
     @Before
     public void setUp() throws Exception {
         DesiredCapabilities abilities = DesiredCapabilities.chrome();
-        abilities.setCapability("version", "61.0");
         this.browser = new RemoteWebDriver( new URL("http://localhost:4444/wd/hub"), abilities);
         this.browser.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         this.browser.manage().window().setPosition(new Point(220, 10));

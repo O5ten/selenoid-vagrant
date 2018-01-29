@@ -10,9 +10,9 @@ The following must be installed on your local system aside from enabling VT-x in
 - [Java 9 SDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (To run the Selenium Remote Test Java Example)
 
 ## Usage
-The cluster can be used for development of selenium tests towards any particular browser.
+The Grid can be used for development of selenium tests towards any particular browser.
 
-###  Run the cluster
+###  Run the grid
 run the following at the root of this maven module
 
 ```bash
